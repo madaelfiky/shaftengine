@@ -1,0 +1,22 @@
+version: 2
+updates:
+  - package-ecosystem: "maven"
+    directories:
+      - "/GUI_Web"
+      - "/GUI_Web_Basic"
+      - "/GUI_Web_Cucumber"
+    schedule:
+      interval: "daily"
+    groups:
+       dev-dependencies:
+          applies-to: version-updates
+          patterns:
+            - "*"
+    target-branch: main
+
+    
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    target-branch: main
