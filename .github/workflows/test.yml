@@ -58,7 +58,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ runner.os }} - Desktop Browsers Tests Report
-          path: "GUI_Web/allure-reports/*_AllureReport.html"
+          #path: "GUI_Web/allure-reports/*_AllureReport.html"
           
   GUI_Web_Basic:
     name: Run GUI_Web_Basic Tests

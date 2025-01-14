@@ -18,11 +18,27 @@
         <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
         <junit-jupiter-engine.version>5.11.3</junit-jupiter-engine.version>
     </properties>
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>io.github.shafthq</groupId>
             <artifactId>SHAFT_ENGINE</artifactId>
             <version>${shaft_engine.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.1.0</version> <!-- Or latest stable version -->
         </dependency>
     </dependencies>
     <build>
@@ -66,11 +82,12 @@
                                 <groupId>org.aspectj</groupId>
                                 <artifactId>aspectjweaver</artifactId>
                                 <version>${aspectjweaver.version}</version>
-                            </dependency>
-                            <dependency>
-                                <groupId>org.apache.maven.surefire</groupId>
-                                <artifactId>surefire-testng</artifactId>
-                                <version>${surefire-testng.version}</version>
+                                <exclusions>
+                                    <exclusion>
+                                        <groupId>org.aspectj</groupId>
+                                        <artifactId>aspectjweaver</artifactId>
+                                    </exclusion>
+                                </exclusions>
                             </dependency>
                         </dependencies>
                         <configuration>
@@ -116,9 +133,9 @@
                         <version>${maven-surefire-plugin.version}</version>
                         <dependencies>
                             <dependency>
-                                <groupId>org.aspectj</groupId>
-                                <artifactId>aspectjweaver</artifactId>
-                                <version>${aspectjweaver.version}</version>
+                                <groupId>com.aventstack</groupId>
+                                <artifactId>extentreports</artifactId>
+                                <version>5.1.0</version> <!-- Or latest stable version -->
                             </dependency>
                             <dependency>
                                 <groupId>org.junit.jupiter</groupId>

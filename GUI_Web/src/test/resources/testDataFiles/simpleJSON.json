@@ -1,3 +1,11 @@
 {
-  "searchQuery": "SHAFT_Engine"
+  "searchQuery": "SHAFT_Engine",
+  "EAUserName": "ea20203",
+  "UOUserName": "uo5555",
+  "password": "123",
+  "url": "https://web-huic.haj.gov.sa/newumrah-test",
+  "passportPicture": "C:\\Users\\DELL\\Documents\\GitHub\\shaftengine\\GUI_Web\\src\\test\\resources\\testDataFiles\\Passportturkey.jpg",
+  "ftmPicture": "C:\\Users\\DELL\\Documents\\GitHub\\shaftengine\\GUI_Web\\src\\test\\resources\\testDataFiles\\ftm.png"
+
+
 }
